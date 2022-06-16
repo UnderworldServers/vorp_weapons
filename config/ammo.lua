@@ -272,8 +272,8 @@ Config3.ammo = { -- both crafting and shops
             }, 
         },
         ["Shotgun Ammo Explosive"] = {
-            key = "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE", 
-            item = "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE",
+            key = "AMMO_SHOTGUN_SLUG_EXPLOSIVE", 
+            item = "AMMO_SHOTGUN_SLUG_EXPLOSIVE",
             letcraft = false, -- show in crafting u can toggle this to false if you want to make this weapon sellable but not craftable
             jobonly = false, -- turn this to true if you want crafting this weapon to only be allowed for a certain job
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 

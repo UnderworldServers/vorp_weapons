@@ -367,6 +367,39 @@ Config4.weapons = {
                 item3 = {name = "rock", amount = 2},
             }, 
         },
+        ["Bola Gravesend"] = {	
+            hashname = "WEAPON_THROWN_BOLAS_GRAVESEND",  
+            jobonly = false,
+            jobs = {"police","gunsmith","rguns"},   
+            letcraft = true, -- show in crafting u can toggle this to false if you want to make this weapon sellable but not craftable
+            materials = {
+                item1 = {name = "Small_Leather", amount = 4},
+                item2 = {name = "wood", amount = 2},
+                item3 = {name = "rock", amount = 2},
+            }, 
+        },
+        ["Bola Hawkmoth"] = {	
+            hashname = "WEAPON_THROWN_BOLAS_HAWKMOTH",  
+            jobonly = false,
+            jobs = {"police","gunsmith","rguns"},   
+            letcraft = true, -- show in crafting u can toggle this to false if you want to make this weapon sellable but not craftable
+            materials = {
+                item1 = {name = "Small_Leather", amount = 4},
+                item2 = {name = "wood", amount = 2},
+                item3 = {name = "rock", amount = 2},
+            }, 
+        },
+        ["Bola Gravesend"] = {	
+            hashname = "WEAPON_THROWN_BOLAS_GRAVESEND",  
+            jobonly = false,
+            jobs = {"police","gunsmith","rguns"},   
+            letcraft = true, -- show in crafting u can toggle this to false if you want to make this weapon sellable but not craftable
+            materials = {
+                item1 = {name = "Small_Leather", amount = 4},
+                item2 = {name = "wood", amount = 2},
+                item3 = {name = "rock", amount = 2},
+            }, 
+        },
         ["Dynamite"] = {	
             hashname = "WEAPON_THROWN_DYNAMITE",  
             jobonly = true,
