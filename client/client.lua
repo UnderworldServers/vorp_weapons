@@ -108,7 +108,7 @@ end
 function playanim(anim,msg)
 	local playerPed = PlayerPedId()
 	TaskStartScenarioInPlace(playerPed, GetHashKey(anim), 20000, true, false, false, false)
-	exports['progressBars']:startUI(20000, msg)
+	exports.urpUtil:DisplayProgressBar(20000)
 	Citizen.Wait(20000)
 	ClearPedTasksImmediately(PlayerPedId())
 end
