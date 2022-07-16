@@ -409,9 +409,10 @@ end
 
 Citizen.CreateThread(function() 
     while true do 
-        Citizen.Wait(0)
-        local sleep = true
+
+        local sleepThread = 500
 		if createdobject then
+			sleepThread = 0
 			drawtext(Config2.Language.rotateitem1, 0.25, 0.74, 0.3, 0.2, true, 255, 255, 255, 255, true, 10000)
 			drawtext(Config2.Language.rotateitem2, 0.25, 0.76, 0.3, 0.2, true, 255, 255, 255, 255, true, 10000)
 			drawtext(Config2.Language.rotateitem3, 0.25, 0.78, 0.3, 0.2, true, 255, 255, 255, 255, true, 10000)
@@ -434,20 +435,20 @@ Citizen.CreateThread(function()
 				roll = roll + 20
 				SetEntityRotation(wepobject,roll % 360,0,h % 360,1,true)
 			end
-			
 		end
+        Citizen.Wait(sleepThread)
 	end
 end)
 
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
+		local sleepThread = 500
 	  	if not createdobject and not crafting  and not inshop then
-      		local coords, letSleep = GetEntityCoords(PlayerPedId()), true
+      		local coords = GetEntityCoords(PlayerPedId())
 	  		for k, v in pairs(Config.customizationLocations) do
 				local dist = GetDistanceBetweenCoords(coords.x,coords.y,coords.z, v.Pos.x,v.Pos.y,v.Pos.z, 1)
 				if dist < 1 then
-					letSleep = false  
+					sleepThread = 0  
         		   		--DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config2.Language.presstobuy)
 
 						   local label  = CreateVarString(10, 'LITERAL_STRING', Config2.Language.presstobuy)
@@ -516,26 +517,22 @@ Citizen.CreateThread(function()
 								end
 							end	
 						end
-					
         		end
-        		
-			end
-			if letSleep then
-				Citizen.Wait(500)
 			end
 		end
+		Citizen.Wait(sleepThread)
     end
 end)
 
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
+	  local sleepThread = 500
 	  	if not crafting and not createdobject and not inshop then
-      		local coords, letSleep = GetEntityCoords(PlayerPedId()), true
+      		local coords = GetEntityCoords(PlayerPedId())
 	  		for k, v in pairs(Config.craftinglocation) do
 				local dist = GetDistanceBetweenCoords(coords.x,coords.y,coords.z, v.Pos.x,v.Pos.y,v.Pos.z, 1)
 				if dist < 1 then
-					letSleep = false  
+					sleepThread = 0  
         		   --	DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config2.Language.presstocraft)
 					   local label  = CreateVarString(10, 'LITERAL_STRING', Config2.Language.presstocraft)
 					   PromptSetActiveGroupThisFrame(prompts, label)
@@ -562,25 +559,22 @@ Citizen.CreateThread(function()
 						end	
 					end
         		end
-        		
-			end
-			if letSleep then
-				Citizen.Wait(500)
 			end
 		end
+	  Citizen.Wait(sleepThread)
     end
 end)
 
 Citizen.CreateThread(function()
 	if Config.weaponshops then
    		while true do
-		  	Citizen.Wait(0)
+		  	local sleepThread = 500
 		  	if not crafting and not createdobject  and not inshop then
-   	   			local coords, letSleep = GetEntityCoords(PlayerPedId()), true
+   	   			local coords = GetEntityCoords(PlayerPedId())
 		  		for k, v in pairs(Config5.weaponshops) do
 					local dist = GetDistanceBetweenCoords(coords.x,coords.y,coords.z, v.Pos.x,v.Pos.y,v.Pos.z, 1)
 					if dist < 2 then
-						letSleep = false  
+						sleepThread = 0  
    	     		   		--DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config2.Language.presstoshop)
 							local label  = CreateVarString(10, 'LITERAL_STRING', Config2.Language.presstoshop)
 							PromptSetActiveGroupThisFrame(prompts, label)
@@ -595,10 +589,8 @@ Citizen.CreateThread(function()
 					end
 					
 				end
-				if letSleep then
-					Citizen.Wait(500)
-				end	
 			end
+		  Citizen.Wait(sleepThread)
 		end
 	end
 end)
@@ -2783,6 +2775,8 @@ Citizen.CreateThread( function()
 					end
 				end
 			end
+		else
+			Citizen.Wait(500)
 		end
 		WarMenu.Display()
         Citizen.Wait(0)
