@@ -386,12 +386,12 @@ AddEventHandler(
 
 			for storeId, store in pairs(Config.Stores) do
 				if Config.Stores[storeId].BlipHandle then
-					print(4)
+					--print(4)
 						RemoveBlip(Config.Stores[storeId].BlipHandle)
 						Config.Stores[storeId].BlipHandle = nil
 				end
 				if Config.Stores[storeId].NPC then
-					print(5)
+					--print(5)
 						DeleteEntity(Config.Stores[storeId].NPC)
 						DeletePed(Config.Stores[storeId].NPC)
 						SetEntityAsNoLongerNeeded(Config.Stores[storeId].NPC)
@@ -485,7 +485,7 @@ Citizen.CreateThread(function()
 						   local label  = CreateVarString(10, 'LITERAL_STRING', Config.Language.presstobuy)
 						   PromptSetActiveGroupThisFrame(prompts, label)
 						if Citizen.InvokeNative(0xC92AC953F0A982AE,openmenu) then
-							print(weaponid)
+							--print(weaponid)
 							if Config.jobonly then
 								TriggerServerEvent("syn_weapons:getjob")
 								Citizen.Wait(400)
@@ -611,16 +611,16 @@ Citizen.CreateThread(function()
 
 						for storeId, storeConfig in pairs(Config.Stores) do
 								if storeConfig.StoreHoursAllowed then
-									--print(2)
+									----print(2)
 										if hour >= storeConfig.StoreClose or hour < storeConfig.StoreOpen then
-											print(3)
+											--print(3)
 												if Config.Stores[storeId].BlipHandle then
-													print(4)
+													--print(4)
 														RemoveBlip(Config.Stores[storeId].BlipHandle)
 														Config.Stores[storeId].BlipHandle = nil
 												end
 												if Config.Stores[storeId].NPC then
-													print(5)
+													--print(5)
 														DeleteEntity(Config.Stores[storeId].NPC)
 														DeletePed(Config.Stores[storeId].NPC)
 														SetEntityAsNoLongerNeeded(Config.Stores[storeId].NPC)
@@ -631,7 +631,7 @@ Citizen.CreateThread(function()
 												local distance = #(coordsDist - coordsStore)
 
 												if (distance <= 3.0) then -- check distance
-													print(6)
+													--print(6)
 														sleep = false
 														local label = CreateVarString(10, 'LITERAL_STRING', storeConfig.PromptName)
 														PromptSetActiveGroupThisFrame(CloseGroup, label)
@@ -646,13 +646,13 @@ Citizen.CreateThread(function()
 														end
 												end
 										elseif hour >= storeConfig.StoreOpen then
-											--print(7)
+											----print(7)
 												if not Config.Stores[storeId].BlipHandle and storeConfig.showblip then
-												--	print(8)
+												--	--print(8)
 														AddBlip(storeId)
 												end
 												if not Config.Stores[storeId].NPC and storeConfig.SpawnNPC then
-												--	print(10)
+												--	--print(10)
 													SpawnNPC(storeId)
 												end
 														local coordsDist = vector3(coords.x, coords.y, coords.z)
@@ -660,7 +660,7 @@ Citizen.CreateThread(function()
 														local distance = #(coordsDist - coordsStore)
 
 														if (distance <= 3.0) then -- check distance
-																print(11)
+																--print(11)
 																sleep = false
 																local label = CreateVarString(10, 'LITERAL_STRING', storeConfig.PromptName)
 																PromptSetActiveGroupThisFrame(OpenGroup, label)
@@ -674,13 +674,13 @@ Citizen.CreateThread(function()
 												end
 										end
 								else
-									print(12)
+									--print(12)
 										if not Config.Stores[storeId].BlipHandle and storeConfig.showblip then
-												print(13)
+												--print(13)
 												AddBlip(storeId)
 										end
 										if not Config.Stores[storeId].NPC and storeConfig.SpawnNPC then
-												print(14)
+												--print(14)
 												SpawnNPC(storeId)
 										end
 										-- ## run this before distance check  no need to run a code that is no meant for the client ## --
@@ -689,7 +689,7 @@ Citizen.CreateThread(function()
 												local distance = #(coordsDist - coordsStore)
 
 												if (distance <= 3.0) then -- check distance
-													print(15)
+													--print(15)
 														sleep = false
 														local label = CreateVarString(10, 'LITERAL_STRING', storeConfig.PromptName)
 														PromptSetActiveGroupThisFrame(OpenGroup, label)
@@ -712,9 +712,9 @@ Citizen.CreateThread(function()
 end)
 
 function AddBlip(Store)
-	print("adding blip for store " .. Store)
+	--print("adding blip for store " .. Store)
 	if Config.Stores[Store].showblip then
-		print("Blip - 1")
+		--print("Blip - 1")
 			Config.Stores[Store].BlipHandle = N_0x554d9d53f696d002(1664425300, Config.Stores[Store].Pos.x,
 					Config.Stores[Store].Pos.y, Config.Stores[Store].Pos.z)
 			SetBlipSprite(Config.Stores[Store].BlipHandle, Config.Stores[Store].blipsprite, 1)
@@ -724,10 +724,10 @@ function AddBlip(Store)
 end
 
 function SpawnNPC(Store)
-	print("adding NPC for store " .. Store)
+	--print("adding NPC for store " .. Store)
 	local v = Config.Stores[Store]
 	if v.SpawnNPC then
-		print("NPC - 1")
+		--print("NPC - 1")
 			LoadModel(v.NpcModel)
 			local npc = CreatePed(v.NpcModel, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, false, true, true, true)
 			Citizen.InvokeNative(0x283978A15512B2FE, npc, true)
