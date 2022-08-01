@@ -1,2 +1,7 @@
 
 *.log
+.vs/*
+.vs/slnx.sqlite
+.vs/vorp_weapons/FileContentIndex/583d0413-dd31-4bb4-9d94-6a0315b0d14f.vsidx
+.vs/vorp_weapons/v17/.suo
+.vs/vorp_weapons/FileContentIndex/read.lock
