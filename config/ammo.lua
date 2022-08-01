@@ -9,7 +9,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200, -- max ammo allowed by game 
             guncheck = 0xDDB2578E95EF7138,-- DO NOT CHANGE THESE 
-            qt = 100, -- number of bullets in box 
+            qt = 20, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "copper", amount = 1},
@@ -25,7 +25,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xDDB2578E95EF7138,
-            qt = 100, -- number of bullets in box    
+            qt = 20, -- number of bullets in box    
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "copper", amount = 5},
@@ -41,7 +41,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 10,
             guncheck = 0xDDB2578E95EF7138,
-            qt = 30, -- number of bullets in box
+            qt = 3, -- number of bullets in box
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "copper", amount = 5},
@@ -57,7 +57,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xDDB2578E95EF7138,
-            qt = 100, -- number of bullets in box	    
+            qt = 20, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 8},
                 item2 = {name = "copper", amount = 8},
@@ -73,7 +73,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 100,
             guncheck = 0xDDB2578E95EF7138,
-            qt = 50, -- number of bullets in box	    
+            qt = 15, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 6},
                 item2 = {name = "copper", amount = 6},
@@ -92,7 +92,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200, -- max ammo allowed by game 
             guncheck = 0xC212F1D05A8232BB ,-- DO NOT CHANGE THESE 
-            qt = 100, -- number of bullets in box 
+            qt = 35, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "copper", amount = 1},
@@ -108,7 +108,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xC212F1D05A8232BB ,
-            qt = 100, -- number of bullets in box    
+            qt = 30, -- number of bullets in box    
             materials = {
                 item1 = {name = "iron", amount = 3},
                 item2 = {name = "copper", amount = 3},
@@ -124,7 +124,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 30,
             guncheck = 0xC212F1D05A8232BB ,
-            qt = 5, -- number of bullets in box
+            qt = 6, -- number of bullets in box
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "copper", amount = 5},
@@ -140,7 +140,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xC212F1D05A8232BB ,
-            qt = 100, -- number of bullets in box	    
+            qt = 25, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 8},
                 item2 = {name = "copper", amount = 8},
@@ -156,7 +156,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 100,
             guncheck = 0xC212F1D05A8232BB ,
-            qt = 50, -- number of bullets in box	    
+            qt = 15, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 8},
                 item2 = {name = "copper", amount = 8},
@@ -176,7 +176,7 @@ Config.ammo = { -- both crafting and shops
             maxammo = 200, -- max ammo allowed by game 
             guncheck = 0x0A82317B7EBFC420 ,-- DO NOT CHANGE THESE 
             guncheck2 = 0x6AD66548840472E5,
-            qt = 100, -- number of bullets in box 
+            qt = 20, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "copper", amount = 1},
@@ -193,7 +193,7 @@ Config.ammo = { -- both crafting and shops
             maxammo = 20, -- max ammo allowed by game 
             guncheck = 0x0A82317B7EBFC420 ,-- DO NOT CHANGE THESE 
             guncheck2 = 0x6AD66548840472E5,
-            qt = 10, -- number of bullets in box 
+            qt = 5, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 10},
                 item2 = {name = "copper", amount = 10},
@@ -210,7 +210,7 @@ Config.ammo = { -- both crafting and shops
             maxammo = 200,
             guncheck = 0x0A82317B7EBFC420 ,
             guncheck2 = 0x6AD66548840472E5,
-            qt = 100, -- number of bullets in box    
+            qt = 20, -- number of bullets in box    
             materials = {
                 item1 = {name = "iron", amount = 10},
                 item2 = {name = "copper", amount = 10},
@@ -227,7 +227,7 @@ Config.ammo = { -- both crafting and shops
             maxammo = 10,
             guncheck = 0x0A82317B7EBFC420 ,
             guncheck2 = 0x6AD66548840472E5,
-            qt = 5, -- number of bullets in box
+            qt = 2, -- number of bullets in box
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "copper", amount = 5},
@@ -244,7 +244,7 @@ Config.ammo = { -- both crafting and shops
             maxammo = 200,
             guncheck = 0x0A82317B7EBFC420 ,
             guncheck2 = 0x6AD66548840472E5,
-            qt = 100, -- number of bullets in box	    
+            qt = 20, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 8},
                 item2 = {name = "copper", amount = 8},
@@ -261,7 +261,7 @@ Config.ammo = { -- both crafting and shops
             maxammo = 100,
             guncheck = 0x0A82317B7EBFC420 ,
             guncheck2 = 0x6AD66548840472E5,
-            qt = 50, -- number of bullets in box	    
+            qt = 15, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 11},
                 item2 = {name = "copper", amount = 11},
@@ -280,7 +280,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200, -- max ammo allowed by game 
             guncheck = 0xC75386174ECE95D5  ,-- DO NOT CHANGE THESE 
-            qt = 100, -- number of bullets in box 
+            qt = 5, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -296,7 +296,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xC75386174ECE95D5  ,
-            qt = 100, -- number of bullets in box    
+            qt = 1, -- number of bullets in box    
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -312,7 +312,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 10,
             guncheck = 0xC75386174ECE95D5  ,
-            qt = 5, -- number of bullets in box
+            qt = 8, -- number of bullets in box
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "rock", amount = 2},
@@ -328,7 +328,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xC75386174ECE95D5  ,
-            qt = 100, -- number of bullets in box	    
+            qt = 8, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "rock", amount = 1},
@@ -346,7 +346,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200, -- max ammo allowed by game 
             guncheck = 0xDDC64F5E31EEDAB6  ,-- DO NOT CHANGE THESE 
-            qt = 100, -- number of bullets in box 
+            qt = 35, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -362,7 +362,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xDDC64F5E31EEDAB6  ,
-            qt = 100, -- number of bullets in box    
+            qt = 35, -- number of bullets in box    
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -378,7 +378,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 10,
             guncheck = 0xDDC64F5E31EEDAB6  ,
-            qt = 5, -- number of bullets in box
+            qt = 3, -- number of bullets in box
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -394,7 +394,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200,
             guncheck = 0xDDC64F5E31EEDAB6  ,
-            qt = 100, -- number of bullets in box	    
+            qt = 25, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -410,7 +410,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 100,
             guncheck = 0xDDC64F5E31EEDAB6  ,
-            qt = 50, -- number of bullets in box	    
+            qt = 15, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -447,7 +447,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 8,
             guncheck = 0  ,
-            qt = 4, -- number of bullets in box    
+            qt = 2, -- number of bullets in box    
             materials = {
                 item1 = {name = "feathers", amount = 2},
                 item2 = {name = "wood", amount = 2},
@@ -464,7 +464,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 10,
             guncheck = 0  ,
-            qt = 4, -- number of bullets in box
+            qt = 6, -- number of bullets in box
             materials = {
                 item1 = {name = "iron", amount = 2},
                 item2 = {name = "wood", amount = 2},
@@ -481,7 +481,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 40,
             guncheck = 0  ,
-            qt = 20, -- number of bullets in box	    
+            qt = 15, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -515,7 +515,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 10,
             guncheck = 0  ,
-            qt = 10, -- number of bullets in box	    
+            qt = 3, -- number of bullets in box	    
             materials = {
                 item1 = {name = "iron", amount = 2},
                 item2 = {name = "wood", amount = 2},
@@ -550,7 +550,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 200, -- max ammo allowed by game 
             guncheck = 0x0A82317B7EBFC420 ,-- DO NOT CHANGE THESE 
-            qt = 100, -- number of bullets in box 
+            qt = 10, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -570,7 +570,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "wood", amount = 2},
@@ -587,7 +587,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "wood", amount = 2},
@@ -604,7 +604,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 5},
                 item2 = {name = "Snake_Poison", amount = 2},
@@ -621,7 +621,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -638,7 +638,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "clay", amount = 5},
                 item2 = {name = "dynamite", amount = 5},
@@ -655,7 +655,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -672,7 +672,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
@@ -689,7 +689,7 @@ Config.ammo = { -- both crafting and shops
             jobs = {"police","gunsmith","rguns"}, -- jobs that can craft this weapon is job only is true 
             maxammo = 3, -- max ammo allowed by game 
             guncheck = 0  ,-- DO NOT CHANGE THESE 
-            qt = 3, -- number of bullets in box 
+            qt = 1, -- number of bullets in box 
             materials = {
                 item1 = {name = "iron", amount = 1},
                 item2 = {name = "wood", amount = 1},
