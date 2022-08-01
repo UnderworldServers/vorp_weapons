@@ -479,7 +479,7 @@ Citizen.CreateThread(function()
 	  		for k, v in pairs(Config.customizationLocations) do
 				local dist = GetDistanceBetweenCoords(coords.x,coords.y,coords.z, v.Pos.x,v.Pos.y,v.Pos.z, 1)
 				if dist < 1 then
-					letSleep = false  
+					sleepThread = 0
         		   		--DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config.Language.presstobuy)
 
 						   local label  = CreateVarString(10, 'LITERAL_STRING', Config.Language.presstobuy)
@@ -562,7 +562,7 @@ Citizen.CreateThread(function()
 	  		for k, v in pairs(Config.craftinglocation) do
 				local dist = GetDistanceBetweenCoords(coords.x,coords.y,coords.z, v.Pos.x,v.Pos.y,v.Pos.z, 1)
 				if dist < 1 then
-					letSleep = false  
+					sleepThread = 0
         		   --	DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config.Language.presstocraft)
 					   local label  = CreateVarString(10, 'LITERAL_STRING', Config.Language.presstocraft)
 					   PromptSetActiveGroupThisFrame(prompts, label)
