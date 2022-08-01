@@ -4,22 +4,22 @@ game "rdr3"
 file 'wepcomps.json'
 
 client_script {
-  'client/warmenu.lua',
-  'client/client.lua'
+  'client/*lua'
 }
 server_script {
-  'server/server.lua'
+  'server/*.lua'
 }
+
 shared_scripts {
-  'config/shops.lua',
-  'config/weapons.lua',
-  'config/language.lua',
+  'config/config.lua',
   'config/ammo.lua',
-  'config/config.lua'
+  'config/language.lua',
+  'config/weapons.lua',
+  'config/shops.lua',
 }
 
 --dont touch
-version '1.0'
+version '2.2'
 vorp_checker 'yes'
 vorp_name '^4Resource version Check^3'
 vorp_github 'https://github.com/VORPCORE/vorp_weaponsv2'
