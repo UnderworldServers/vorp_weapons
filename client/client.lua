@@ -447,9 +447,9 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
-		local sleep = true
+		local sleepThread = 500
 		if createdobject then
+			sleepThread = 3
 			drawtext(Config2.Language.rotateitem1, 0.25, 0.74, 0.3, 0.2, true, 255, 255, 255, 255, true, 10000)
 			drawtext(Config2.Language.rotateitem2, 0.25, 0.76, 0.3, 0.2, true, 255, 255, 255, 255, true, 10000)
 			drawtext(Config2.Language.rotateitem3, 0.25, 0.78, 0.3, 0.2, true, 255, 255, 255, 255, true, 10000)
@@ -474,18 +474,19 @@ Citizen.CreateThread(function()
 			end
 
 		end
+		Citizen.Wait(sleepThread)
 	end
 end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		local sleepThread = 500
 		if not createdobject and not crafting and not inshop then
 			local coords, letSleep = GetEntityCoords(PlayerPedId()), true
 			for k, v in pairs(Config.customizationLocations) do
 				local dist = GetDistanceBetweenCoords(coords.x, coords.y, coords.z, v.Pos.x, v.Pos.y, v.Pos.z, 1)
 				if dist < 1 then
-					letSleep = false
+					sleepThread = 5
 					--DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config2.Language.presstobuy)
 
 					local Label = CreateVarString(10, 'LITERAL_STRING', Config2.Language.presstobuy)
@@ -555,10 +556,6 @@ Citizen.CreateThread(function()
 					end
 
 				end
-
-			end
-			if letSleep then
-				Citizen.Wait(500)
 			end
 		end
 		Citizen.Wait(sleepThread)
@@ -567,15 +564,15 @@ end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		local sleepThread = 500
 		if not crafting and not createdobject and not inshop then
 			local coords, letSleep = GetEntityCoords(PlayerPedId()), true
 
 			for k, v in pairs(Config.craftinglocation) do
 			
-				local dist = GetDistanceBetweenCoords(coords.x, coords.y, coords.z, v.Pos.x, v.Pos.y, v.Pos.z, 1)
+				local dist = #(vector3(coords.x, coords.y, coords.z) - vector3(v.Pos.x, v.Pos.y, v.Pos.z))
 				if dist < 1 then
-					letSleep    = false
+					sleepThread = 5
 					--	DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z, Config2.Language.presstocraft)
 					local Label = CreateVarString(10, 'LITERAL_STRING', Config2.Language.presstocraft)
 					PromptSetActiveGroupThisFrame(OpenGroup, Label)
@@ -604,10 +601,8 @@ Citizen.CreateThread(function()
 				end
 
 			end
-			if letSleep then
-				Citizen.Wait(500)
-			end
 		end
+		Citizen.Wait(sleepThread)
 	end
 end)
 
@@ -616,7 +611,7 @@ Citizen.CreateThread(function()
 		PromptSetUp()
 		PromptSetUp2()
 		while true do
-			Citizen.Wait(0)
+			local sleepThread = 500
 			local player = PlayerPedId()
 			local coords = GetEntityCoords(player)
 			local sleep = true
@@ -649,7 +644,7 @@ Citizen.CreateThread(function()
 
 							if (distance <= 3.0) then -- check distance
                                 
-								sleep = false
+								sleepThread = 5
 								local Label = CreateVarString(10, 'LITERAL_STRING', storeConfig.PromptName)
 								PromptSetActiveGroupThisFrame(CloseGroup, Label)
 								local label2 = CreateVarString(10, 'LITERAL_STRING',
@@ -681,7 +676,7 @@ Citizen.CreateThread(function()
 
 							if (distance <= 3.0) then -- check distance
 								
-								sleep = false
+								sleepThread = 5
 								local Label = CreateVarString(10, 'LITERAL_STRING', storeConfig.PromptName)
 								PromptSetActiveGroupThisFrame(OpenGroup, Label)
 
@@ -710,7 +705,7 @@ Citizen.CreateThread(function()
 
 						if (distance <= 3.0) then -- check distance
 
-							sleep = false
+							sleepThread = 5
 							local Label = CreateVarString(10, 'LITERAL_STRING', storeConfig.PromptName)
 							PromptSetActiveGroupThisFrame(OpenGroup, Label)
 
@@ -724,9 +719,7 @@ Citizen.CreateThread(function()
 					end
 				end
 			end
-			if sleep then
-				Citizen.Wait(1000)
-			end
+			Citizen.Wait(sleepThread)
 		end
 	end
 end)
@@ -827,6 +820,7 @@ Citizen.CreateThread(function()
 	WarMenu.CreateSubMenu('confirmbuy', 'wepcomp', Config2.Language.buyselect)
 
 	while true do
+		local sleepThread = 5
 		if WarMenu.IsMenuOpened('wepcomp') then
 			if cal == true then
 				sum = 0
@@ -2968,10 +2962,10 @@ Citizen.CreateThread(function()
 				end
 			end
 		else
-			Citizen.Wait(500)
+			sleepThread = 500
 		end
 		WarMenu.Display()
-		Citizen.Wait(0)
+		Citizen.Wait(sleepThread)
 	end
 end)
 
